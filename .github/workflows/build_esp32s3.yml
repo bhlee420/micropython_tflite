@@ -5,7 +5,7 @@ name: ESP32 S3
 on:
   pull_request:
     paths:
-      - '.github/workflows/build_esp32s3.yml'
+      - '.github/workflows/build_esp32s3.yml' 
       - "micropython-modules/microlite/**"
       - "micropython-modules/micropython-camera-driver/**"
 
