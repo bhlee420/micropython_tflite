@@ -19,7 +19,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Build ESP32-MICROLITE No SPIRAM - 4MB Flash
+      - name: Build ESP32-MICROLITE No SPIRAM - 4MB Flash with Lee
         run: |
           source ./scripts/build.sh && prepare_dependencies  
           echo "CODECONTENTS=$(cat ./dependencies/micropython/tools/ci.sh)"
@@ -30,6 +30,8 @@ jobs:
           echo "TARGET=$TARGET"
           ./scripts/assemble-unified-image-esp.sh $TARGET "MICROLITE"
           ls $TARGET/build-MICROLITE
+          pwd
+          
         shell: bash
 
       - name: Archive ESP32-MICROLITE No SPIRAM - 4 MB Flash firmware
